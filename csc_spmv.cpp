@@ -1,4 +1,8 @@
-// compile with g++ -fopenmp csc_spmv.cpp -o csc_spmv.out
+// Mert Alaydin
+// October 2024
+// compile with :
+// g++ -fopenmp csc_spmv.cpp -o csc_spmv.out
+
 #include <omp.h>
 #include <iostream>
 #include <fstream>
@@ -16,7 +20,7 @@ using std::chrono::duration;
 using std::chrono::milliseconds;
 
 /*
-A class for COO (coordinate) matrix type 
+A class for COO (coordinate) matrix type
 */
 template <typename T>
 class COO_Matrix {
