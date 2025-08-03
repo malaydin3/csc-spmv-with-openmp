@@ -30,6 +30,13 @@ cd build
 make ${nproc}
 ```
 
+## Running the Project
+
+```bash
+cd bin
+./csc_spmv.out
+```
+
 ## Input Format
 
 The program expects four input files:
