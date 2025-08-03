@@ -1,8 +1,6 @@
-// Mert Alaydin
-// October 2024
-// compile with :
-// g++ -fopenmp csc_spmv.cpp -o csc_spmv.out
-
+// Compressed Sparse Column (CSC) Matrix-Vector Multiplication with OpenMP
+// This code implements CSC matrix-vector multiplication using OpenMP for parallelization. 
+// It includes a COO matrix class for reading sparse matrices from text files and converting them to CSC format.
 #include <omp.h>
 #include <iostream>
 #include <fstream>
@@ -350,13 +348,12 @@ T computeDifferenceL2(const vector<T>& a, const vector<T>& b){
 int main() {
 
     // Create the matrix object
-    // These files are already created by coo_matrix_generator.py script using SciPy in COO format
-    string rowFile = "row_indices.txt";
-    string colFile = "col_indices.txt";
-    string valsFile = "values.txt";
-    string dimsFile = "dims.txt";
-    // Vector to be post-multiplied 
-    string vecFile = "vec.txt";
+    // These files are already created by utils/coo_matrix_generator.py
+    string rowFile = "../input/row_indices.txt";
+    string colFile = "../input/col_indices.txt";
+    string valsFile = "../input/values.txt";
+    string dimsFile = "../input/dims.txt";
+    string vecFile = "../input/vec.txt";
 
     // Parse the vector
     vector<double> vec = parseDenseVector<double>(vecFile);
